@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from "./Home";
+import Navbar from "./Navbar";
+import "animate.css";
+import TicTacToe from "./TicTacToe";
+import Rps from "./Rps";
+import Wordle from "./Wordle";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <div className="content">
+            <Switch>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route path="/tictactoe">
+                <TicTacToe />
+              </Route>
+              <Route path="/rps">
+                <Rps />
+              </Route>
+              <Route path="/wordle">
+                <Wordle />
+              </Route>
+            </Switch>
+          </div>
+        </div>
+      </Router>
     </div>
   );
 }

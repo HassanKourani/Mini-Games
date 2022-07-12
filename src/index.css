@@ -1,13 +1,178 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@600&family=Viga&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Viga", sans-serif;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.navbar {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}
+.games {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.game-card {
+  margin: 50px;
+  border: 4px black double;
+  height: 100px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+.game-card:hover {
+  height: 110px;
+  width: 85%;
+  box-shadow: 5px 10px #888888;
+}
+.links {
+  margin: 20px;
+  text-decoration: none;
+  color: black;
+}
+.title {
+  margin: 15px;
+}
+.game-title {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+  margin: 20px auto;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#row1,
+#row2,
+#row3 {
+  display: flex;
+}
+#b1 {
+  border-right: 5px black solid;
+  border-bottom: 5px black solid;
+}
+#b2 {
+  border-bottom: 5px black solid;
+}
+#b3 {
+  border-left: 5px black solid;
+  border-bottom: 5px black solid;
+}
+#b4 {
+  border-right: 5px black solid;
+}
+#b6 {
+  border-left: 5px black solid;
+}
+#b7 {
+  border-right: 5px black solid;
+  border-top: 5px black solid;
+}
+#b8 {
+  border-top: 5px black solid;
+}
+#b9 {
+  border-left: 5px black solid;
+  border-top: 5px black solid;
+}
+.box:hover {
+  background-color: #c3c3c3;
+}
+.players,
+.elements {
+  display: flex;
+  justify-content: center;
+}
+.element,
+.player {
+  margin: 20px;
+}
+.players div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.element {
+  max-width: 90px;
+  transition: 0.1s;
+}
+#rock:hover,
+#paper:hover,
+#scissors:hover {
+  background-color: #c0bebe;
+}
+.result {
+  display: flex;
+  justify-content: center;
+}
+/* wordle */
+.word {
+  display: flex;
+  justify-content: center;
+}
+.letter {
+  border: 2px #888888 solid;
+  width: 50px;
+  height: 50px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.input {
+  margin: 10px;
+  padding: 10px;
+  width: 20%;
+  border-radius: 60px;
+  border-color: rgb(78, 78, 252);
+}
+.input:focus {
+  outline: none;
+}
+.btn {
+  padding: 12px;
+  height: fit-content;
+  border: none;
+  background-color: rgb(78, 78, 252);
+  color: white;
+  border-radius: 5px;
+}
+.btn:hover {
+  padding: 12px;
+  height: fit-content;
+  border: none;
+  background-color: rgb(37, 37, 248);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
